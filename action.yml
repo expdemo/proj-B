@@ -37,7 +37,7 @@ runs:
         
       run: |
         echo "Hellow"
-        echo env.ORG_REPO
+        echo "Repo name : $env.ORG_REPO"
         echo "$PR_details"
         echo "Hellow"
         source '${{ github.action_path }}/.venv/bin/activate'
