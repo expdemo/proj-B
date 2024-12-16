@@ -1,3 +1,5 @@
+import os
+
 def main():
   org_repo = os.environ["ORG_REPO"]
   token = os.environ["GITHUB_TOKEN"]
