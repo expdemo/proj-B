@@ -37,8 +37,8 @@ runs:
         
       run: |
         echo "Hellow"
-        echo "Repo name : $ORG_REPO"
-        echo "PR_number : $PR_details"
+        echo "Repo name : $env.ORG_REPO"
+        echo "PR_number : PR_details"
         echo "Hellow"
         source '${{ github.action_path }}/.venv/bin/activate'
         python3 ${{ github.action_path }}/main.py
