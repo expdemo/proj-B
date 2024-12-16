@@ -32,8 +32,13 @@ runs:
       shell: bash
       env:
         ORG_REPO: ${{ inputs.org_repo }}
-        GITHUB_TOKEN: ${{ inputs.github_token }}
         PR_details: ${{ inputs.github.event.pull_request.number }}
+        GITHUB_TOKEN: ${{ inputs.github_token }}
+        
       run: |
+        echo "Hellow"
+        echo $ORG_REPO
+        echo $PR_details
+        echo "Hellow"
         source '${{ github.action_path }}/.venv/bin/activate'
         python3 ${{ github.action_path }}/main.py
