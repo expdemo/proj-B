@@ -1,8 +1,8 @@
 import os
 
 def main():
-  org_repo = os.getenv("ORG_REPO")
-  pr_details = os.getenv("PR_details")
+  org_repo = os.environ["ORG_REPO"]
+  pr_details = os.getenv(PR_details)
   print("Hellooooo")
   print(org_repo)
   print(type(pr_details))
