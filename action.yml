@@ -23,6 +23,7 @@ runs:
         python-version: '3.10'
 
     - name: Set environment variable for PR number
+      shell: bash
       run: |
         echo "ORG_REPO=${{ inputs.org_repo }}" >> $GITHUB_ENV
         echo "PR_details=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
