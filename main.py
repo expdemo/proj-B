@@ -6,7 +6,7 @@ repo_name = os.getenv('ORG_REPO')
 pr_number = os.getenv('PR_details')
 print("in main : ",repo_name, len(pr_number))
 github_token = os.getenv('GITHUB_TOKEN')
-
+print("in main : ",github_token, len(github_token))
 # Initialize GitHub client
 g = Github(github_token)
 repo = g.get_repo(repo_name)
