@@ -13,7 +13,7 @@ inputs:
   PR_details:
     description: PR details
     required: true
-    default: ${{ github.event.pull_request.number }}      
+    default: ${{ github.event.pull_request }}      
 
 runs:
   using: composite
@@ -26,14 +26,14 @@ runs:
       shell: bash
       run: |
         echo "ORG_REPO=${{ inputs.org_repo }}" >> $GITHUB_ENV
-        echo "PR_details=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+        echo "PR_details=${{ github.event.pull_request }}" >> $GITHUB_ENV
         echo "GITHUB_TOKEN=${{ inputs.github_token }}" >> $GITHUB_ENV
           
     - name: Install Python dependencies
       shell: bash
       env:
         ORG_REPO: ${{ inputs.org_repo }}
-        PR_details: ${{ inputs.github.event.pull_request.number }}
+        PR_details: ${{ inputs.github.event.pull_request }}
         GITHUB_TOKEN: ${{ inputs.github_token }}
       run: |
         python3 -m venv ${{ github.action_path }}/.venv
