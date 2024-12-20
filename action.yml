@@ -35,6 +35,7 @@ runs:
       env:
         ORG_REPO: ${{ inputs.org_repo }}
         PR_details: ${{ github.event.pull_request.number }}
+        GITHUB_TOKEN: ${{ inputs.github.token }}
       run: |
         python3 -m venv ${{ github.action_path }}/.venv
         source ${{ github.action_path }}/.venv/bin/activate
