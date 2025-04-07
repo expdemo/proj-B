@@ -22,6 +22,9 @@ runs:
       with:
         python-version: '3.10'
 
+    - name: Get 7-digit SHA
+        run: echo "The 7-digit Git SHA is: ${GITHUB_SHA:0:7}"
+        
     - name: Set environment variable for PR number
       shell: bash
       run: |
