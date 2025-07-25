@@ -15,7 +15,7 @@ repo = g.get_repo(repo_name)
 pr = repo.get_pull(int(pr_number))
 
 # List of prohibited names to check against
-prohibited_names = ['bad_name', 'forbidden_term']
+prohibited_names = ['bad_name', 'Wikipedia']
 
 # Check if any prohibited names are present in PR title or body
 def check_for_prohibited_names(pr):
